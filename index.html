@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ResearchVault — Discover real research</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="/"><span class="mark">RV</span><span>Research<span class="muted">Vault</span></span></a><nav><a href="#discover">Discover</a><a href="#saved">My library</a><a href="#about">About</a></nav><span class="pill">Research discovery MVP</span></header>
+<main>
+<section class="hero">
+  <div class="eyebrow"><span class="dot"></span> A clearer path to scientific evidence</div>
+  <h1>Find real research.<br><em>Trust every reference.</em></h1>
+  <p class="lead">Search scholarly sources, check DOI records and discover legitimate open-access versions — all in one workspace.</p>
+  <div class="searchbox" id="discover">
+    <label for="query">What are you researching?</label>
+    <div class="searchrow"><input id="query" placeholder="e.g. CRISPR Cas12a point-of-care diagnostics" value=""><button id="searchBtn">Search papers <span>→</span></button></div>
+    <div class="filters"><label>From <input id="fromYear" type="number" placeholder="2020"></label><label>To <input id="toYear" type="number" placeholder="2026"></label><span>Sources: OpenAlex · Crossref · Europe PMC</span></div>
+  </div>
+  <div class="trustline"><span>✓</span> Publication records retrieved from scholarly databases, not invented by AI.</div>
+</section>
+<section class="results-section">
+  <div class="sectionhead"><div><div class="eyebrow">DISCOVERY WORKSPACE</div><h2 id="resultTitle">Start with a research question</h2></div><span id="count" class="muted"></span></div>
+  <div id="status" class="status">Enter a topic above to search scholarly publications.</div>
+  <div id="results" class="results"></div>
+</section>
+<section class="library" id="saved">
+  <div class="sectionhead"><div><div class="eyebrow">YOUR WORKSPACE</div><h2>Saved publications</h2></div><button class="ghost" id="refreshSaved">Refresh library ↻</button></div>
+  <div id="savedList" class="savedlist"><p class="muted">Your saved papers will appear here.</p></div>
+</section>
+<section class="about" id="about"><div><div class="eyebrow">BUILT FOR RESEARCHERS</div><h2>Evidence first.<br>AI second.</h2></div><p>ResearchVault retrieves publication records from scholarly sources and helps you inspect them. A DOI record confirms that metadata exists; it does not prove that a paper is methodologically sound or free from retraction. Always consult the original publication.</p></section>
+</main>
+<footer><span>© 2026 ResearchVault</span><span>Early MVP · Not yet a paid service</span></footer>
+<script src="/static/app.js"></script>
+</body></html>

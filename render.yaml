@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: researchvault
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_PATH
+        value: /var/data/researchvault.db
+    disk:
+      name: researchvault-data
+      mountPath: /var/data
+      sizeGB: 1
